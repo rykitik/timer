@@ -8,13 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.querySelector('#resetTimerBtn');
 
     const timer = new Timer(fiveMinutes, display);
+    timer.setCountdownMode(false)
 
     startBtn.addEventListener('click', () => {
         timer.startTimer();
     });
 
     stopBtn.addEventListener('click', () => {
+        // Получение прошедшего времени
+        // const endTime = timer.getElapsedTime();
+        // const { hours, minutes, seconds } = timer.formatTimeToVariables(Math.abs(endTime)); 
         timer.stopTimer();
+        // timer.getDisplayedTime() - получение отоброжаемого времени в виде строки
     });
 
     resetBtn.addEventListener('click', () => {

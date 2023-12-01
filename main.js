@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.querySelector('#resetTimerBtn');
 
     const timer = new Timer(fiveMinutes, display);
-    timer.setCountdownMode(false)
+    timer.setCountdownMode(true)
 
     startBtn.addEventListener('click', () => {
         timer.startTimer();
